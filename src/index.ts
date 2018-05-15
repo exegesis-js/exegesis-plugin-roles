@@ -29,7 +29,7 @@ function resolveRef(document: any, ref: string | any) : any | undefined {
 }
 
 function resolveRefPriv(document: any, ref: string) : any {
-    if(!ref.startsWith('#/') && !ref.startsWith('/')) {
+    if(!ref.startsWith('#/') && !ref.startsWith('/') && ref !== '') {
         throw new Error(`Cannot resolve non-local ref ${ref}`);
     }
 
