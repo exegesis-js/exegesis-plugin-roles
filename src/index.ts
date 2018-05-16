@@ -138,7 +138,7 @@ class RolesPlugin implements ExegesisPluginInstance {
             if(badSchemes.length > 0) {
                 // TODO: Improve error message.
                 context.res.setStatus(403)
-                    .setBody({
+                    .json({
                         message: `Authenticated with ${schemes.join(', ')} but missing one or more required roles.`
                     });
             }
