@@ -63,7 +63,7 @@
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.1",
-    "exegesis": "^0.4.0",
+    "exegesis": "^1.0.0-rc1",
     "husky": "^1.0.0-rc.2",
     "lint-staged": "^7.1.0",
     "markdownlint-cli": "^0.8.2",
