@@ -1,5 +1,7 @@
 # exegesis-plugin-roles
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/exegesis-js/exegesis-plugin-roles.svg)](https://greenkeeper.io/)
+
 [![NPM version](https://badge.fury.io/js/exegesis-plugin-roles.svg)](https://npmjs.org/package/exegesis-plugin-roles)
 [![Build Status](https://travis-ci.org/exegesis-js/exegesis-plugin-roles.svg)](https://travis-ci.org/exegesis-js/exegesis-plugin-roles)
 [![Coverage Status](https://coveralls.io/repos/exegesis-js/exegesis-plugin-roles/badge.svg)](https://coveralls.io/r/exegesis-js/exegesis-plugin-roles)
