@@ -19,7 +19,6 @@
     "lint:tests": "tslint -c test/tslint.json -t stylish 'test/**/*.ts'",
     "lint:markdown": "markdownlint src/**/*.md *.md",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run build && npm test",
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
