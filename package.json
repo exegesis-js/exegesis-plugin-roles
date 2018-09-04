@@ -87,7 +87,7 @@
   },
   "dependencies": {
     "json-ptr": "^1.1.0",
-    "openapi3-ts": "^0.12.0",
+    "openapi3-ts": "^1.0.0",
     "semver": "^5.5.0"
   }
 }
