@@ -63,7 +63,7 @@
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.2",
     "exegesis": "^2.0.0",
-    "husky": "^3.0.0",
+    "husky": "^4.0.2",
     "lint-staged": "^9.0.0",
     "mocha": "^6.1.1",
     "nyc": "^15.0.0",
