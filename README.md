@@ -65,7 +65,7 @@ npm install exegesis-plugin-roles
 Add this to your Exegesis options:
 
 ```js
-import exegesisRolesPlugin from 'exegesis-roles-plugin';
+import exegesisRolesPlugin from 'exegesis-plugin-roles';
 
 options = {
     plugins: [
