@@ -1,7 +1,7 @@
 import semver from 'semver';
 import * as oas3 from 'openapi3-ts';
 import { ExegesisPluginContext, OAS3ApiInfo, ExegesisPluginInstance, ExegesisPlugin } from 'exegesis';
-import jsonPtr from 'json-ptr';
+import * as jsonPtr from 'json-ptr';
 
 const HTTP_METHODS = ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE'];
 const EXEGESIS_ROLES = 'x-exegesis-roles';
@@ -33,13 +33,18 @@ function resolveRefPriv(document: any, ref: string) : any {
         throw new Error(`Cannot resolve non-local ref ${ref}`);
     }
 
-    const path = jsonPtr.decode(ref);
+    const path = jsonPtr.JsonPointer.decode(ref).slice();
     let currentDoc = document;
     while(path.length > 0) {
-        const pathname = path.shift() as string;
-        currentDoc = currentDoc && currentDoc[pathname];
-        while(currentDoc && currentDoc.$ref) {
-            currentDoc = resolveRefPriv(document, currentDoc.$ref);
+        const pathname = path.shift();
+        /* istanbul ignore else */
+        if(pathname !== undefined) {
+            currentDoc = currentDoc && currentDoc[pathname];
+            while(currentDoc && currentDoc.$ref) {
+                currentDoc = resolveRefPriv(document, currentDoc.$ref);
+            }
+        } else {
+            // Unreachable.
         }
     }
 
