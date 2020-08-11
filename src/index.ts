@@ -110,7 +110,8 @@ class RolesPlugin implements ExegesisPluginInstance {
     }
 
     postSecurity(context: ExegesisPluginContext) {
-        if(!context.security) {
+        const security = context.security;
+        if(!security) {
             // No authenticated users.  We match roles against each
             // authenticated user, so there's no work for us to do here.
             return;
@@ -121,14 +122,14 @@ class RolesPlugin implements ExegesisPluginInstance {
         const requiredRoles = this._rolesForPaths[`${api.pathItemPtr}/${method}`];
 
         if(requiredRoles) {
-            const schemes = Object.keys(context.security)
+            const schemes = Object.keys(security)
                 .filter(schemeName => {
                     // Roles don't apply to oauth2
                     return this._securitySchemesTypes[schemeName] !== 'oauth2';
                 });
 
             const badSchemes = schemes.filter(scheme => {
-                const userRoles = context.security![scheme].roles || [];
+                const userRoles = security[scheme].roles || [];
                 const userAllowed = requiredRoles.some(roles =>
                     roles.every(role => userRoles.includes(role))
                 );
