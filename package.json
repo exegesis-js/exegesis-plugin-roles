@@ -63,7 +63,7 @@
     "coveralls": "^3.0.2",
     "eslint": "^7.6.0",
     "exegesis": "^2.5.0",
-    "husky": "^4.0.2",
+    "husky": "^5.0.9",
     "lint-staged": "^10.0.3",
     "mocha": "^8.1.1",
     "nyc": "^15.0.0",
