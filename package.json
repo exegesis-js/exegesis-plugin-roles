@@ -64,7 +64,7 @@
     "eslint": "^7.6.0",
     "exegesis": "^2.5.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.0.3",
+    "lint-staged": "^11.0.0",
     "mocha": "^8.1.1",
     "nyc": "^15.0.0",
     "semantic-release": "^17.1.1",
